@@ -1,114 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tejas Ramane - Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <h1 class="logo">My Portfolio</h1>
-            <ul class="nav-links">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow">
         <div class="container">
-            <article>
-                <h2>About Me</h2>
-                <p>
-                    Hello! I'm <strong>Tejas Ramane</strong>, a passionate and creative <em>full-stack developer</em>
-                    who loves turning ideas into powerful, user-friendly digital solutions.
-                    I thrive on building web and mobile applications that solve real-world problems,
-                    with a strong focus on performance, design, and innovation.
-                </p>
-            </article>
+            <a class="navbar-brand text-white fw-bold" href="#">My Portfolio</a>
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container text-center">
+            <h2>About Me</h2>
+            <div class="row align-items-center g-5 justify-content-center">
+                <div class="col-md-4">
+                    <img src="images/profile.jpg" alt="Profile" class="about-img img-fluid">
+                </div>
+                <div class="col-md-7">
+                    <p class="about-text">
+                        Hello! I'm <strong>Tejas Ramane</strong>, a passionate and creative <em>full-stack developer</em>
+                        who loves turning ideas into powerful, user-friendly digital solutions.
+                        I thrive on building applications that solve real-world problems,
+                        with a strong focus on performance, design, and innovation.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-        <h2>Skills</h2>
-        <div class="skill-list">
-            <div class="skill-card">Java</div>
-            <div class="skill-card">Dot Net</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">Machine Learning</div>
-            <div class="skill-card">SQL</div>
+    <!-- Skills -->
+    <section id="skills" class="skills bg-light">
+        <div class="container text-center">
+            <h2>Skills</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <div class="skill-card">Java</div>
+                <div class="skill-card">Dot Net</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">Machine Learning</div>
+                <div class="skill-card">SQL</div>
+            </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
-
-            <!-- Project 1 -->
-            <article class="project-card">
-                <h3>
-                    <a href="https://github.com/tejas11054/BiasX" target="_blank">Mitigating Bias in AI</a>
-                </h3>
-                <p>
-                    This ML-based project aims to detect and mitigate bias in datasets using
-                    a combination of algorithms. It returns an updated dataset, bias analysis,
-                    and a mitigation report to ensure fair outcomes.
-                    <br><strong>(March 2025)</strong>
-                </p>
-            </article>
-
-            <!-- Project 2 -->
-            <article class="project-card">
-                <h3>
-                    <a href="https://github.com/tejas11054/Health-Care" target="_blank">HealthCare (Android App)</a>
-                </h3>
-                <p>
-                    An Android application developed using Java & XML to manage the child
-                    vaccination process. It allows parents to book doctor appointments and
-                    communicate directly, reducing paperwork in the healthcare sector.
-                    <br><strong>(April 2024)</strong>
-                </p>
-            </article>
-
-            <!-- Project 3 -->
-            <article class="project-card">
-                <h3>
-                    <a href="https://github.com/tejas11054/HSE" target="_blank">HSE</a>
-                </h3>
-                <p>
-                    This project aims to enhance workplace safety by detecting whether workers
-                    are wearing the necessary safety equipment. It uses a YOLO model to identify
-                    safety gear worn by workers.
-                    <br><strong>(August 2024)</strong>
-                </p>
-            </article>
-
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="text-center">Projects</h2>
+            <div class="row g-4">
+                <!-- Project Cards -->
+                <div class="col-md-4">
+                    <div class="project-card h-100">
+                        <h4><a href="https://github.com/tejas11054/BiasX" target="_blank">Mitigating Bias in AI</a></h4>
+                        <p>
+                            ML-based project to detect and mitigate bias in datasets using algorithms.
+                            Outputs updated dataset, bias analysis, and mitigation report.
+                            <br><strong>(March 2025)</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card h-100">
+                        <h4><a href="https://github.com/tejas11054/Health-Care" target="_blank">HealthCare (Android App)</a></h4>
+                        <p>
+                            Android app for managing child vaccination processes with doctor booking
+                            and communication features.
+                            <br><strong>(April 2024)</strong>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card h-100">
+                        <h4><a href="https://github.com/tejas11054/HSE" target="_blank">HSE (AI & ML Project)</a></h4>
+                        <p>
+                            Workplace safety project using YOLO model to detect safety gear on workers.
+                            <br><strong>(August 2024)</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <!-- Achievements -->
+    <section id="achievements" class="py-4 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">🏆 Achievements</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-primary text-white">2024</div>
+                    <div class="timeline-content">
+                        <h4>Engineering</h4>
+                        <p>Secured <b>2nd Rank</b> in B.E. Information Technology with <b>9.61 CGPA</b> from FCRIT, Vashi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-info text-white">2024</div>
+                    <div class="timeline-content">
+                        <h4>Internship</h4>
+                        <p>Recognized for <b>Outstanding Contribution</b> during the internship at <b>Meta Craftlab</b>.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-success text-white">2024</div>
+                    <div class="timeline-content">
+                        <h4>4th Runner Up</h4>
+                        <p>Awarded <b>4th Runner Up</b> in “CodeBits 2.0” National Hackathon at GIT, Ratnagiri.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon bg-warning text-white">2024</div>
+                    <div class="timeline-content">
+                        <h4>Hackathon Finalist</h4>
+                        <p>Selected as <b>Finalist</b> in “Hack The Spring” Hackathon at Government Engineering College Gandhinagar, Gujarat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact bg-light">
+        <div class="container text-center">
+            <h2>Contact Me</h2>
+            <div class="social-links mb-4">
+                <a href="https://www.linkedin.com/in/tejas-ramane-18b04a278" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tejramane11@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+917710991549"><i class="fas fa-phone"></i></a>
+                <a href="https://github.com/tejas11054" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://instagram.com/_tejas_011" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <form class="mx-auto mt-4" style="max-width:500px;">
+                <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
+                <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
+                <div class="mb-3"><textarea class="form-control" placeholder="Your Message" rows="4" required></textarea></div>
+                <button type="submit" class="btn w-100">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Tejas Ramane. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
