@@ -1,4 +1,4 @@
-﻿using FoodOrderingApp.Data;
+using FoodOrderingApp.Data;
 using FoodOrderingApp.Models;
 using FoodOrderingApp.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -51,7 +51,8 @@ namespace FoodOrderingApp.Services
                     {
                         MenuId = menuId,
                         Quantity = qty,
-                        ItemTotal = itemTotal
+                        ItemTotal = itemTotal,
+                        OrderItemId = 0
                     };
                     order.OrderItems.Add(orderItem);
                 }
@@ -80,6 +81,7 @@ namespace FoodOrderingApp.Services
             foreach (var oi in order.OrderItems)
             {
                 oi.OrderId = order.OrderId;
+                oi.OrderItemId = 0;
                 _context.OrderItems.Add(oi);
             }
             _context.SaveChanges();
