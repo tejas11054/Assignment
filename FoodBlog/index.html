@@ -1,75 +1,142 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Pasta Recipe</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <!-- Header -->
+    <header class="text-center">
         <h1>🍝 Creamy Alfredo Pasta</h1>
         <p>A simple and delicious recipe for pasta lovers!</p>
     </header>
 
-    <main>
+    <main class="container my-5">
         <!-- Ingredients Section -->
-        <section class="ingredients">
-            <h2>🛒 Ingredients</h2>
-            <ul>
-                <li>200g Fettuccine pasta</li>
-                <li>2 tbsp Butter</li>
-                <li>3 Garlic cloves (minced)</li>
-                <li>1 cup Fresh cream</li>
-                <li>½ cup Grated parmesan</li>
-                <li>Salt & Pepper (to taste)</li>
-                <li>Fresh parsley (for garnish)</li>
-            </ul>
-        </section>
+        <section class="ingredients mb-5">
+      <h2>🛒 Ingredients</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <div class="card ingredient-card shadow-sm text-center p-3">
+            <div class="fs-1">🍝</div>
+            <h5 class="mt-3">200g Fettuccine Pasta</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card ingredient-card shadow-sm text-center p-3">
+            <div class="fs-1">🧈</div>
+            <h5 class="mt-3">2 tbsp Butter</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card ingredient-card shadow-sm text-center p-3">
+            <div class="fs-1">🧄</div>
+            <h5 class="mt-3">3 Garlic cloves (minced)</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card ingredient-card shadow-sm text-center p-3">
+            <div class="fs-1">🥛</div>
+            <h5 class="mt-3">1 cup Fresh cream</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card ingredient-card shadow-sm text-center p-3">
+            <div class="fs-1">🧀</div>
+            <h5 class="mt-3">½ cup Grated Parmesan</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card ingredient-card shadow-sm text-center p-3">
+            <div class="fs-1">🧂</div>
+            <h5 class="mt-3">Salt & Pepper (to taste)</h5>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card ingredient-card shadow-sm text-center p-3">
+            <div class="fs-1">🌿</div>
+            <h5 class="mt-3">Fresh parsley (for garnish)</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 
         <!-- Steps Section -->
-        <section class="steps">
+        <section class="steps mb-5">
             <h2>👩‍🍳 Cooking Steps</h2>
-            <ol>
-                <li>
-                    <figure>
-                        <img src="assets/images/step1.webp" alt="Boiling pasta">
-                        <figcaption>Boil the pasta in salted water until al dente.</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/images/step2.jpg" alt="Cooking sauce">
-                        <figcaption>Sauté garlic in butter, then add cream and parmesan.</figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="assets/images/step3.jpg" alt="Mixing pasta with sauce">
-                        <figcaption>Mix pasta with sauce, season, and garnish with parsley.</figcaption>
-                    </figure>
-                </li>
-            </ol>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="assets/images/step1.webp" class="card-img-top" alt="Boiling pasta">
+                        <div class="card-body">
+                            <p class="card-text">Boil the pasta in salted water until al dente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="assets/images/step2.jpg" class="card-img-top" alt="Cooking sauce">
+                        <div class="card-body">
+                            <p class="card-text">Sauté garlic in butter, then add cream and parmesan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <img src="assets/images/step3.jpg" class="card-img-top" alt="Mixing pasta with sauce">
+                        <div class="card-body">
+                            <p class="card-text">Mix pasta with sauce, season, and garnish with parsley.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Media Section -->
-        <section class="media">
+        <section class="media mb-5">
             <h2>🎥 Video Tutorial</h2>
-            <video controls>
-                <source src="assets/video/recipe.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <div class="card shadow rounded-3 p-3 mb-4">
+                <video controls>
+                    <source src="assets/video/recipe.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
 
+            <div>
+
+            </div><br />
             <h2>🎧 Chef's Audio Note</h2>
-            <audio controls>
-                <source src="assets/audio/recipe-audio.opus" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
+            <div class="card shadow rounded-3 p-3">
+                <audio controls>
+                    <source src="assets/audio/recipe-audio.opus" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </section>
     </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="text-center">
         <p>© 2025 Delicious Recipes</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
