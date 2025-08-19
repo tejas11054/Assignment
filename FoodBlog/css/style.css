@@ -1,4 +1,4 @@
-﻿/* Reset & Base */
+/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
@@ -10,41 +10,61 @@ body {
     line-height: 1.6;
     background: #fffdf7;
     color: #333;
-    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #333 !important;
+    font-weight: 600;
 }
 
 /* Header */
 header {
-    text-align: center;
-    padding: 30px 10px;
+    padding: 40px 20px;
     background: linear-gradient(120deg, #f6d365, #fda085);
     color: #fff;
     border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-    header h1 {
-        font-size: 2.5rem;
-    }
+header h1 {
+    font-size: 2.8rem;
+}
 
-    header p {
-        font-size: 1.2rem;
-        margin-top: 5px;
-    }
+header p {
+    font-size: 1.2rem;
+    margin-top: 8px;
+}
 
-/* Sections */
+/* Section Headings */
 section {
     margin: 40px auto;
-    max-width: 800px;
+    max-width: 1000px;
 }
 
-    section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 15px;
-        color: #e07a5f;
-        border-left: 5px solid #e07a5f;
-        padding-left: 10px;
-    }
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #e07a5f;
+    border-left: 5px solid #e07a5f;
+    padding-left: 12px;
+}
 
 /* Ingredients */
 .ingredients ul {
@@ -57,34 +77,43 @@ section {
     margin: 8px 0;
 }
 
-/* Steps */
-.steps ol {
-    list-style: decimal inside;
+.ingredient-card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff8f0;
 }
 
-.steps figure {
-    margin: 20px 0;
-    text-align: center;
+.ingredient-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.ingredient-card i {
+    font-size: 2.5rem;
+}
+
+/* Steps */
+.steps .card {
+    border: none;
+    transition: transform 0.2s;
+}
+
+.steps .card:hover {
+    transform: translateY(-5px);
 }
 
 .steps img {
-    width: 100%;
-    max-width: 400px;
+    height: 220px; /* same height for all */
+    width: 100%; /* full card width */
+    object-fit: cover; /* crop nicely */
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.steps figcaption {
-    font-style: italic;
-    margin-top: 8px;
-    color: #555;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* Media */
 .media video,
 .media audio {
     width: 100%;
-    margin: 15px 0;
     border-radius: 12px;
     outline: none;
 }
@@ -96,10 +125,8 @@ section {
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
     background: #f6d365;
     color: #333;
+    padding: 25px;
     border-radius: 20px 20px 0 0;
 }
